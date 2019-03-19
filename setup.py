@@ -63,10 +63,10 @@ Please refer to the github homepage for detailed instructions on installation an
 
 """
 
-version_dummy = {}
-exec(read('GPy/__version__.py'), version_dummy)
-__version__ = version_dummy['__version__']
-del version_dummy
+#version_dummy = {}
+#exec(read('GPy/__version__.py'), version_dummy)
+#__version__ = version_dummy['__version__']
+#del version_dummy
 
 #Mac OS X Clang doesn't support OpenMP at the current time.
 #This detects if we are building on a Mac
@@ -108,7 +108,7 @@ ext_mods = [Extension(name='GPy.kern.src.stationary_cython',
                       extra_link_args = link_args)]
 
 setup(name = 'GPy',
-      version = __version__,
+      version = "1.9.2",
       author = read_to_rst('AUTHORS.txt'),
       author_email = "gpy.authors@gmail.com",
       description = ("The Gaussian Process Toolbox"),
